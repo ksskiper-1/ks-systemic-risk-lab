@@ -63,7 +63,7 @@ E_{ij}=\alpha A_i w_{ij},\qquad
 - **Веса требований:** на выбранных связях используются веса Дирихле с единичными параметрами. Их сумма по строке равна единице до масштабирования на межбанковские активы.
 
 ```math
-m_i=\min\{\max(1,X_i),N-1\},\qquad X_i\sim\operatorname{Poisson}(3).
+m_i=\min\{\max(1,X_i),N-1\},\qquad X_i\sim\mathrm{Poisson}(3).
 ```
 
 Эта формула задаёт число контрагентов только для распределённой топологии. При фиксированной реализации изменение α сохраняет набор связей и относительные веса, меняя только общий масштаб требований.
@@ -439,7 +439,7 @@ n_{\mathrm{sat}}^{(t)}=\sum_i\mathbf{1}_{\{h_i^{(t)}\ge1-10^{-9}\}}.
 ### Линейная передача до потолка
 
 ```math
-M=\operatorname{diag}(1/K)(1-R)E,\qquad
+M=\mathrm{diag}(1/K)(1-R)E,\qquad
 M_{ij}=\frac{(1-R)E_{ij}}{K_i},\qquad
 \rho(M)=\max_{\lambda\in\sigma(M)}|\lambda|.
 ```
@@ -465,7 +465,7 @@ h^*=(I-M)^{-1}b=\sum_{q=0}^{\infty}M^qb.
 ### Доля насыщенных банков
 
 ```math
-\operatorname{sat\_share}=
+\mathrm{sat\_share}=
 \frac1N\sum_i\mathbf{1}_{\{h_i^{(\infty)}(s_{\mathrm{ref}}A)\ge1-10^{-9}\}},
 \qquad s_{\mathrm{ref}}=0.01.
 ```
@@ -532,8 +532,8 @@ T={}&\Delta_1-\Delta_2.
 
 ```math
 \delta=0.1\max\left\{
-\operatorname{median}(A1_{\mathrm{pilot}}),
-\operatorname{median}(A2_{\mathrm{pilot}})
+\mathrm{median}(A1_{\mathrm{pilot}}),
+\mathrm{median}(A2_{\mathrm{pilot}})
 \right\}.
 ```
 
@@ -586,7 +586,7 @@ T=+0.0107,\qquad
 \begin{aligned}
 d_r(\alpha)&=A2S_{\mathrm{conc},r}(\alpha)-A2S_{\mathrm{dist},r}(\alpha),\\
 D(\alpha)&=\frac1{n_{\mathrm{ok}}}\sum_r d_r(\alpha),\\
-\delta_S(\alpha)&=0.1\,\operatorname{median}
+\delta_S(\alpha)&=0.1\,\mathrm{median}
 \{A2S_{\mathrm{dist},r}^{\mathrm{pilot}}(\alpha)\}.
 \end{aligned}
 ```
